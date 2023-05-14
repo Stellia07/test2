@@ -5,7 +5,7 @@ const upload = require('./helpers/multer_config').upload;
 app.use(express.json());
 
 app.get('/', (req, res, next) => {
-    res.status(200).json(Alarcon);
+        res.status(200).json({ success: 'Hello Server' });
 });
 
 app.post('/upload', upload.array('imageUploads', 10), (req, res) => {
